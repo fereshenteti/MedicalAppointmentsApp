@@ -11,15 +11,18 @@ public class Rdv implements Serializable{
 	private Long idRDV;
 	private String dateRDV;
 	private String trancheHeure;
+	private Patient patient;
 	
 	public Rdv() {
 		super();
 	}
-	public Rdv(Long idRDV, String dateRDV, String trancheHeure) {
+
+	public Rdv(Long idRDV, String dateRDV, String trancheHeure, Patient patient) {
 		super();
 		this.idRDV = idRDV;
 		this.dateRDV = dateRDV;
 		this.trancheHeure = trancheHeure;
+		this.patient = patient;
 	}
 	public Long getIdRDV() {
 		return idRDV;
@@ -40,4 +43,11 @@ public class Rdv implements Serializable{
 		this.trancheHeure = trancheHeure;
 	}
 
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
 }

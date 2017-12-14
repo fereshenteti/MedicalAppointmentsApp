@@ -8,11 +8,13 @@ public class Medecin implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -1256609551175042164L;
-	private Long idMedecin;
+	private int idMedecin;
 	private String nom;
 	private String prenom;
 	private String grade;
 	private String specialite;
+	private String username;
+	private String password;
 	private boolean actif;
 	
 	
@@ -21,23 +23,24 @@ public class Medecin implements Serializable{
 	}
 
 
-	public Medecin(Long idMedecin, String nom, String prenom, String grade,
-			String specialite) {
+	public Medecin(int idMedecin, String nom, String prenom, String grade,
+			String specialite, boolean actif) {
 		super();
 		this.idMedecin = idMedecin;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.grade = grade;
 		this.specialite = specialite;
+		this.actif = actif;
 	}
 
 
-	public Long getIdMedecin() {
+	public int getIdMedecin() {
 		return idMedecin;
 	}
 
 
-	public void setIdMedecin(Long idMedecin) {
+	public void setIdMedecin(int idMedecin) {
 		this.idMedecin = idMedecin;
 	}
 

@@ -61,6 +61,12 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    public void clearSharedPrefs(){
+        SharedPreferences.Editor settings = getApplicationContext().getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+        settings.clear();
+        settings.apply();
+    }
+
     public void setSharedPrefs(String _mail, String _pwd) {
         SharedPreferences.Editor settings = getApplicationContext().getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
         settings.putString("login", _mail);

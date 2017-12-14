@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.henteti.feres.webservicevolley.Models.Medecin;
 import com.henteti.feres.webservicevolley.Models.User;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class AppController {
         private static AppController mInstance;
         private static Context mCtx;
         private RequestQueue mRequestQueue;
+        private Medecin medecin;
 
         private User user;
 
@@ -59,6 +61,13 @@ public class AppController {
             this.user = user;
         }
 
+    public Medecin getMedecin() {
+        return medecin;
+    }
+
+    public void setMedecin(Medecin medecin) {
+        this.medecin = medecin;
+    }
 }
 
 
